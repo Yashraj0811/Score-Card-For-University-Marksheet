@@ -1,0 +1,336 @@
+body {
+    background-color: gray;
+    color: black;
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding: 15px;
+  }
+  
+  .introimg {
+    height: 20px;
+  }
+  
+  
+  .form {
+    background-color: white;
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: auto auto;
+    height: 500px;
+    /* margin-top: 20px; */
+    padding: 20px;
+    width: 800px;
+    height: 500px;
+  }
+  
+  .title {
+    color: black;
+    font-family: sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  
+  .subtitle {
+    color: black;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  .input-container {
+    display: flex;
+    height: 50px;
+    position: relative;
+    width: 100%;
+  }
+  
+  .ic1 {
+    margin-top: 40px;
+    /* margin-right: 100px; */
+  }
+  
+  .ic2 {
+    margin-top: 30px;
+  }
+  
+  .input {
+    background-color: rgb(245, 165, 165);
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 18px;
+    height: 100%;
+    outline: 0;
+    /* padding: 20px 20px 0; */
+    width: 100%;
+  }
+  
+  .cut {
+    background-color: #50838a;
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 76px;
+  }
+  
+  .cut-short {
+    width: 50px;
+  }
+  
+  .input:focus~.cut,
+  .input:not(:placeholder-shown)~.cut {
+    transform: translateY(8px);
+  }
+  
+  .placeholder {
+    color: #65657b;
+    font-family: sans-serif;
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    /* margin-right: 100px; */
+    top: 20px;
+  }
+  
+  .input:focus~.placeholder,
+  .input:not(:placeholder-shown)~.placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+  
+  .input:not(:placeholder-shown)~.placeholder {
+    color: #bcbce8;
+  }
+  
+  .input:focus~.placeholder {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .btn {
+    /* background-color: #08d; */
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #08d;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    margin-top: 38px;
+    outline: 0;
+    text-align: center;
+    /* width: 70%; */
+  }
+  
+  .btn button {
+    height: 50px;
+    width: 70%;
+    border-radius: 12px;
+    font-size: 20;
+    background-color: #06b;
+  }
+  
+  .submit:active {
+    background-color: #06b;
+  }
+  
+  
+  .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: firstlook;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+  }
+  
+  @keyframes firstlook {
+    0% {
+      transform: translateY(-5000px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  
+  }
+  
+  .main-content {
+    background-color: #f6fafa;
+  }
+  
+  .section {
+    animation: coffeeMenu;
+    animation-fill-mode: forwards;
+    animation-duration: 2s;
+    animation-delay: 3s;
+  }
+  
+  @keyframes coffeeMenu {
+    0% {
+      transform: translateX(-500px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  
+  .section:first-child {
+    animation-delay: 2s;
+  }
+  
+  .section:second-child {
+    animation-delay: 4s;
+  }
+  
+  
+  
+  .text-white {
+    color: rgb(253, 253, 253);
+  }
+  
+  .page-header-container {
+    text-align: center;
+  }
+  
+  .h1{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .page-header h1{
+    display: inline-block;
+    vertical-align: baseline;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    font-size: 2.1rem;
+    font-weight: 400;
+  }
+  
+  .section-header {
+    color: #996633;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  table {
+    width: 100%;
+    border-spacing: 0px;
+  }
+  
+  td {
+    text-align: center;
+    padding: 10px 15px;
+  }
+  
+  .text-left {
+    text-align: left;
+  }
+  
+  th {
+    color: #333333;
+    font-weight: 400;
+    font-size: 1.2rem;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #e5e8ed;
+  }
+  
+  tr.tr-header {
+    background-color: #c4cdd6;
+    height: 50px;
+  }
+  
+  .section {
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+  
+  .section-small {
+    max-width: 490px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  .mb-0 {
+    margin-bottom: 0;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  figure {
+    margin: 0;
+  }
+  
+  figcaption {
+    text-align: center;
+  }
+  
+  figcaption span {
+    display: block;
+    color: #757575;
+    font-size: 18px;
+  }
+  
+  .item-name {
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .special-items {
+    display: flex;
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  
+  
+  .feild3 #studentinfo {
+    color: #f40a0a;
+    font-size: 25px;
+  }
+  
+  .feild3 #submarks {
+    color: #f40a0a;
+    font-size: 25px;
+  }
+  
+  .feild3 #subtotal {
+    color: #f40a0a;
+    font-size: 25px;
+  }
+  
+  
+  .btn {
+    /* position: fixed; */
+    top: 990px;
+    margin-left: 725px;
+  }

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Maeksheet Validation</title>
+    <link href="./style (1).css" rel="stylesheet" /> 
+    <script src="./script (1).js"></script>
+
+  </head>
+  <body>
+    <form action="" class="mainform" name="validMark" onsubmit="return myFunction()">
+
+      <div class="container">
+        <div class="text-white page-header-container">
+          <img src="logo.png" alt="" height="250px" width="500px">
+          <br><br>
+        </div>
+        <div class="main-content">
+          <h1 class="page-header" style="text-align: center; padding-top: 20px;">Student Marksheet Validation</h1>
+          
+          <div>
+            <div class="introimg">
+
+            </div>
+              <form id="detailsInput" action="">
+                  <div class="form">
+                      <div class="title">Enter your details</div>
+                      
+                      <div class="input-container ic1">
+                        
+                        <div class="inputsection">
+                          
+                        </div>
+                        <input id="name" class="input" type="text" name="txtname" placeholder=" " />
+                        <div class="cut"></div>
+                        <label for="name" class="placeholder">Name</label>
+                      </div>
+                      <div class="input-container ic2">
+                        <input id="rollno" class="input" type="text" name="txtRoll" placeholder=" " />
+                        <div class="cut"></div>
+                        <label for="rollno" class="placeholder">Roll no</label>
+                      </div>
+                      <div class="input-container ic2">
+                        <input id="text" class="input" type="text" name="txtBranch" placeholder=" " />
+                        <div class="cut "></div>
+                        <label for="text" class="placeholder">Branch</label>
+                      </div>
+                      <div class="input-container ic2">
+                          <input id="text" class="input" type="text" name="txtSemester" placeholder=" " />
+                          <div class="cut"></div>
+                          <label for="text" class="placeholder">Semester</label>
+                      </div>
+                      <!-- <button type="text" class="submit">submit</button> -->
+                    </div>
+              </form>
+          </div>
+          <!-- Marks Section -->
+          <section class="section">
+            <h2 class="section-header">Enter Your Marks</h2>
+            <div class="responsive-table">
+              <table>
+                <tr class="tr-header">
+                  <th >Course-Code</th>
+                  <th width="400">Course-Tittle</th>
+                  <th >UT-I(20)</th>
+                  <th>UT-II(20)</th>
+                  <th>Marks(80)</th>
+                </tr>
+                <tr>
+                  <td ><b>ITC302</b></td>
+                  <td class="text-left"><b>Internet Programming</b></td>
+                  <td height="25"><input height="" type="text" name="Ipu1" maxlength="2" size="10"></td>   
+                  <td height="25"><input  type="text" name="Ipu2" maxlength="2" size="10"></td>   
+                  <td height="25"><input  type="text" name="Ipfinal" maxlength="2" size="10"></td>   
+                </tr>
+                <tr>
+                  <td><b>ITC305</b></td>
+                  <td class="text-left"><b>Computer Network Security</b></td>
+                  <td><input type="text" name="Cnu1" maxlength="2" size="10"></td>   
+                  <td><input type="text" name="Cnu2" maxlength="2" size="10"></td>   
+                  <td><input type="text" name="Cnfinal" maxlength="2" size="10"></td>   
+                </tr>
+                <tr>
+                  <td ><b>ITC301</b></td>
+                  <td class="text-left"><b>E-Business</b></td>
+                  <td ><input  type="text" name="ebu1" maxlength="2" size="10"></td>   
+                  <td ><input  type="text" name="ebu2" maxlength="2" size="10"></td>   
+                  <td ><input  type="text" name="ebfinal" maxlength="2" size="10"></td>      
+                </tr>
+                <tr>
+                  <td><b>ITC303</b></td>
+                  <td class="text-left"><b>Software Engineering</b></td>
+                  <td><input type="text" name="Seu1" maxlength="2" size="10"></td>   
+                  <td><input type="text" name="Seu2" maxlength="2" size="10"></td>   
+                  <td><input type="text" name="Sefinal" maxlength="2" size="10"></td>   
+                </tr>
+                <tr>
+                  <td><b>ITC304</b></td>
+                  <td class="text-left"><b>Advanced Management Technology</b></td>
+                  <td><input type="text" name="Mtu1" maxlength="2" size="10"></td>   
+                  <td><input type="text" name="Mtu2" maxlength="2" size="10"></td>   
+                  <td><input type="text" name="Mtfinal" maxlength="2" size="10"></td>   
+                </tr>
+              </table>
+              <div class="btn">
+                  <button type="button" onclick='myFunction()'>Submit</button>
+                  
+              </div>
+            </div>
+          </section>
+  
+          <!-- Marksheet -->
+          <section class="section">
+            <h2 class="section-header">Marksheet</h2>
+            <div class="responsive-table">
+              <table>
+                <th class="section-header" colspan="7" id="studentinfo"><Strong>Student Information</Strong></th>
+                <tr>
+                  <td class="text-left"><Strong>Name</Strong></td>
+                  <td  colspan="7"><font id="name" name="txtname"></font></td>
+              </tr>
+              <tr>
+                  <td class="text-left"><Strong>Semester</Strong></td>
+                  <td colspan="7"><font id="sem"></font></td>
+              </tr>
+              <tr>
+                  <td class="text-left"><Strong>Branch</Strong></td>
+                  <td colspan="7"><font id="branch"></font></td>
+              </tr>
+              <tr>
+                  <td class="text-left"><Strong>Seatnumber</Strong></td>
+                  <td colspan="7"><font id="rollno"></font></td>
+              </tr>
+              <br><br>
+  
+              <th class="section-header" colspan="8" id="submarks"><Strong>Subjects Marks</Strong></th>
+                          <tr class="tr-header">
+                              <th><Strong>Course Code:</Strong></th>
+                              <th><strong>Subjects:</strong></th>
+                              <th><strong >UT-I</strong></th>
+                              <th ><strong>UT-II</strong></th>
+                              <th ><strong>Avg</strong></th>
+                              <th >Final Exam</th>
+                              <th >Total(100)</th>
+                              <th>Grade</th>
+                          </tr>
+                          
+                          <tr>
+                              <td><strong>ITC302</strong></td>
+                              <td class="text-left"><strong>Internet Programming</strong></td>
+                              <td><font id="u1ip"></font></td>
+                              <td><font id="u2ip"></font></td>
+                              <td><font id="avgip"></font></td>
+                              <td><font id="finalip"></font></td>
+                              <td><font id="totalip"></font></td>
+                              <td><font id="gradeip"></font></td>
+                          </tr>
+                          <tr>
+                              <td><strong>ITC305</strong></td>
+                              <td class="text-left"><strong>Computer Security</strong></td>
+                              <td><font id="u1cns"></font></td>
+                              <td><font id="u2cns"></font></td>
+                              <td><font id="avgcns"></font></td>
+                              <td><font id="finalcns"></font></td>
+                              <td><font id="totalcns"></font></td>
+                              <td><font id="gradecns"></font></td>
+                          </tr>
+                          <tr>
+                              <td><strong>ITC302</strong></td>
+                              <td class="text-left"><strong>E-Business</strong></td>
+                              <td><font id="u1eb"></font></td>
+                              <td><font id="u2eb"></font></td>
+                              <td><font id="avgeb"></font></td>
+                              <td><font id="finaleb"></font></td>
+                              <td><font id="totaleb"></font></td>
+                              <td><font id="gradeeb"></font></td>
+                          </tr>
+                          <tr>
+                              <td><strong>ITC303</strong></td>
+                              <td class="text-left"><strong>Software Engineering</strong></td>
+                              <td><font id="u1se"></font></td>
+                              <td><font id="u2se"></font></td>
+                              <td><font id="avgse"></font></td>
+                              <td><font id="finalse"></font></td>
+                              <td><font id="totalse"></font></td>
+                              <td><font id="gradese"></font></td>
+                          </tr>
+                          <tr>
+                              <td><strong>ITC304</strong></td>
+                              <td class="text-left"><strong>Management Technology</strong></td>
+                              <td><font id="u1mt"></font></td>
+                              <td><font id="u2mt"></font></td>
+                              <td><font id="avgmt"></font></td>
+                              <td><font id="finalmt"></font></td>
+                              <td><font id="totalmt"></font></td>
+                              <td><font id="grademt"></font></td>
+                          </tr>
+  
+                          <th class="section-header" colspan="8" ID="subtotal"><strong>Marks Total</strong></th>
+                          <tr>
+                            <td class="text-left"><strong>Average(20)</strong></td>
+                            <td colspan="7"><font id="avg"></font></td>
+                        </tr>
+                          <tr>
+                              <td class="text-left"><strong>Total(500)</strong></td>
+                              <td colspan="7"><font id="total"></font></td>
+                          </tr>
+                          <tr>
+                              <td class="text-left"><strong>Percentage</strong></td>
+                              <td colspan="7"><font id="percentage"></font></td>
+                          </tr>
+                          <tr>
+                              <td class="text-left"><strong>CGPA</strong></td>
+                              <td colspan="7"><font id="cgpa"></font></td>
+                          </tr>
+                          <tr>
+                              <td class="text-left"><strong>Result</strong></td>
+                              <td colspan="7"><font id="grade"></font></td>
+                          </tr>
+                          
+                
+              </table>
+            </div>
+          </section>
+          
+        </div>
+        
+      </div>
+    </form>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>
